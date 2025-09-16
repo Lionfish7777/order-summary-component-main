@@ -1,0 +1,241 @@
+/* ========== CSS VARIABLES ========== */
+:root {
+    --blue-100: hsl(225, 100%, 94%);
+    --blue-700: hsl(245, 75%, 52%);
+    --blue-50: hsl(225, 100%, 98%);
+    --gray-600: hsl(224, 23%, 55%);
+    --blue-950: hsl(223, 47%, 23%);
+    
+    --font-family: 'Red Hat Display', sans-serif;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+  }
+/*========== GLOBAL STYLES RESET ============*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: hsl(225, 100%, 94%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+  }
+
+  /*======== Prevent horizontal scrolling and ensure full width =======*/
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* ========================
+   LAYOUT / CONTAINERS
+   ======================== */
+   .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+
+  /* ========================
+   COMPONENT STYLES (Card, Buttons, etc.)
+   ======================== */
+  .card {
+    background-color: var(--blue-50);
+    width: 90%;
+    max-width: 375px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+  }
+
+  /* ========== CARD HERO ========== */
+  .card__hero {
+    width: 100%;
+    display: block;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  /* ========== CARD BODY ========== */
+  .card__body {
+    padding: 2rem;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  /* ========== HEADINGS & TEXT ========== */
+  .card__title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+    margin-bottom: 1rem;
+  }
+  
+
+  .card__description {
+    font-size: 1rem;
+    color: hsl(224, 23%, 55%);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  
+
+/* ========== PLAN SECTION ========== */
+.card__plan {
+    background-color: hsl(196, 29%, 82%);
+    color:hsl(0, 0%, 0%);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+
+  .card__plan-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+.card__plan-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+  .card__plan-type {
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+  }
+  
+  .card__plan-price {
+    font-size: 0.9rem;
+    color: hsl(224, 23%, 55%);
+  }
+  
+  .card__plan-change {
+    font-weight: 700;
+    color: hsl(245, 75%, 52%);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    cursor: pointer;
+    justify-content: space-around;
+  }
+  .card__plan-change:hover {
+    color: hsl(245, 75%, 65%);
+  }
+  
+  .card__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+
+/* ========== BUTTONS ========== */
+.card__buttons {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+
+
+  .card__button {
+display: block;
+width: 100%;
+padding: 1rem;
+font-weight: 700;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+font-family: 'Red Hat Display', sans-serif;
+font-size: 1rem;
+  }
+
+
+
+  .card__button-primary {
+    background-color: hsl(245, 75%, 52%);
+    color: aquamarine;
+    border: none;
+    padding: 1rem;
+    font-weight: 700;
+    border-radius: 0.75rem;
+    box-shadow: 0 1rem 1rem rgba(56, 41, 224, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+
+  .card__button-primary:hover {
+    background-color: hsl(245, 75%, 60%);
+  }
+  
+  .card__button-secondary {
+    background: white;
+    border: none;
+    font-weight: 900;
+    color: hsl(224, 23%, 55%);
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .card__button-secondary:hover {
+    color: hsl(223, 47%, 23%);
+  }
+  
+  /* ========== ATTRIBUTION ========== */
+  .attribution {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--gray-600);
+  }
+   
+
+
+  
+/* ========== RESPONSIVE DESIGN ========== */
+  @media (min-width: 768px) {
+    .card {
+      max-width: 450px;
+    }
+  
+    .card__title {
+      font-size: 1.75rem;
+    }
+  
+    .card__description {
+      font-size: 1.1rem;
+    }
+  
+    .card__button-primary {
+      font-size: 1rem;
+    }
+  
+    .card__button-secondary {
+      font-size: 1rem;
+    }
+  }
+  
